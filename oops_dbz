@@ -1,0 +1,26 @@
+class Character:
+  def __init__(self, character_name, character_skill, character_power_level = 0, character_ssj = True):
+    self.name = character_name
+    self.skill = character_skill
+    self.pwr_lvl = character_power_level
+    self.ssj = character_ssj
+  def __repr__(self):
+    print("{name} is awesome with {pwr_lvl}")
+  
+class Training:
+  def __init__(self, pwr_level, ssj = False)
+  def martial_arts(self):
+    self.pwr_lvl += 1000
+  def snake_way(self):
+    self.pwr_lvl += 20000
+  def namek_training(self):
+    if self.ssj = False:
+      self.pwr_lvl += 100000
+    else:
+      self.pwr_lvl += 50000000
+  def fight(self, other_player):
+    self.pwr_lvl = 1.2*other_player.pwr_lvl
+    other_player.pwr_lvl = 1.2*self.pwr_lvl
+
+player_1 = Dbz("Goku", "Kameha meha", 100, False)
+print(player_1)
