@@ -1,0 +1,29 @@
+class Character:
+  #Character class is to create multiple characters. 
+  def __init__(self, character_name, character_skill, character_ssj = True):
+    self.name = character_name
+    self.skill = character_skill
+    self.ssj = character_ssj
+  def __repr__(self):
+    return ("{name} is awesome and {skill} is the best.".format(name = self.name, skill = self.skill))
+  
+class Training(Character):
+  def __init__(self, character_pwr_level = 0, character_stamina = 0, character_health = 100):
+    self.pwr_level = character_pwr_level
+    self.stamina = character_stamina
+    self.health = character_health
+  def martial_arts(self):
+    self.pwr_lvl += 1000
+  def snake_way(self):
+    self.pwr_lvl += 20000
+  def namek_training(self):
+    self.pwr_lvl += 100000
+  def fight(self, other_player):
+    self.pwr_lvl = 1.2*other_player.pwr_lvl
+    other_player.pwr_lvl = 1.2*self.pwr_lvl
+    self.health -= 50
+  def __repr__(self):
+    return ("{name} has a power level of {pwr_lvl} and {stamina} points stamina.".format(name = self.name, pwr_lvl = self.pwr_lvl, stamina = self.stamina))
+
+player_1 = Character("Goku", "Kameha-meha", False)
+print(repr(player_1))
